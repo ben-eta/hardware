@@ -87,8 +87,8 @@ static int set_light_backlight(struct light_device_t* dev,
         ALOGE("can not open file %s\n", path);
         return result;
     }
-    //fprintf(file, "%d", brightness);
-	fprintf(file, "%d", max_brightness - brightness);
+    fprintf(file, "%d", brightness);
+	//fprintf(file, "%d", max_brightness - brightness);
     fclose(file);
 
     result = 0;
